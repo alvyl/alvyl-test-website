@@ -4,141 +4,431 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Alvyl</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
+              white: "#FDFCF4",
+              wgray: "#E3E3E3",
               clifford: "#da373d",
+              lblack: "#121212",
+              lblock: "#2F2F2F",
+              rblock: "#242424",
+            },
+            fontFamily: {
+              orpheus: ["orpheus-pro"],
+              brandon: ["brandon-grotesque"],
             },
             gridTemplateColumns: {
               // Simple 16 column grid
               16: "repeat(16, minmax(0, 1fr))",
+              15: "repeat(15, minmax(0, 1fr))",
+            },
+            gridColumn: {
+              "span-16": "span 16 / span 16",
+              "span-15": "span 15 / span 15",
+              "span-14": "span 14 / span 14",
+              "span-13": "span 13 / span 13",
+            },
+            gridColumnStart: {
+              13: "13",
+              14: "14",
+              15: "15",
+              16: "16",
+              17: "17",
+            },
+            gridColumnEnd: {
+              13: "13",
+              14: "14",
+              15: "15",
+              16: "16",
+              17: "17",
+            },
+            screens: {
+              xs: "320px",
+              sm: "640px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1280px",
+              //xl: "1366px",
+              "2xl": "1920px",
+            },
+            lineHeight: {
+              xxl: "68px",
+              xl: "52px",
+              lg: "50px",
+              md: "48px",
+              sm: "46px",
+              xs: "38px",
+            },
+            fontSize: {
+              xxl: "60px",
+              xl: "52px",
+              lg: "40px",
+              md: "38px",
+              sm: "32px",
+              xs: "28px",
+              xxs: "26px",
             },
           },
+          corePlugins: [],
         },
       };
     </script>
+
+    <!-- importing typography fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/yib0usv.css" />
   </head>
   <body>
-    <script>
-      AOS.init();
-    </script>
-    <div class="grid grid-cols-16 gap-0">
-      <div
-        class="tetrisBlock col-span-3 flex justify-center items-center"
-        data-aos="fade-up"
-        data-aos-delay="2300"
-      >
-        <img src="./public/alvylLogo.svg" class="w-[116px] h-[74px]" />
-      </div>
-      <div
-        class="tetrisBlock col-span-10 flex justify-center items-center brandon-grotesque text-4xl font-thin"
-        data-aos="fade-up"
-        data-aos-delay="1000"
-        data-aos-offset="400"
-      >
-        Amazing products are coming up everyday, but often <br />
-        they lack right builders to build functional and <br />
-        beautiful products
-      </div>
-      <div
-        class="tetrisBlock col-span-3 flex flex-col justify-center items-center space-y-2"
-      >
-        <div id="hamburgerIcon"></div>
-        <div id="hamburgerIcon"></div>
-      </div>
-    </div>
-    <div class="grid grid-cols-16 gap-0">
-      <div
-        class="tetrisBlock col-span-10 flex justify-center items-center font-[brandon-grotesque] text-4xl font-thin"
-        data-aos="fade-up"
-        data-aos-delay="2500"
-      >
-        Alvyl is a new age people first tech <br />
-        agency. Your own team of builders.
-      </div>
-      <div
-        class="tetrisBlock col-span-6 flex justify-center items-center font-[orpheus-pro] text-5xl font-medium"
-        data-aos="fade-up"
-        data-aos-delay="2000"
-      >
-        Great products need <br />
-        great builders
-      </div>
-    </div>
-    <div class="grid grid-cols-16 gap-0">
-      <div
-        class="tetrisBlock col-span-5 flex items-center justify-center font-[orpheus-pro] text-5xl font-bold"
-        data-aos="fade-up"
-        data-aos-delay="2600"
-      >
-        What our <br />
-        builders are <br />
-        capable of ?
-      </div>
-      <div
-        class="tetrisBlock col-span-3 flex items-center justify-center font-[brandon-grotesque] text-3xl font-normal"
-        data-aos="fade-up"
-        data-aos-delay="2800"
-      >
-        Design & <br />
-        Branding
-      </div>
-      <div
-        class="tetrisBlock col-span-4 flex items-center justify-center font-[brandon-grotesque] text-3xl font-normal"
-        data-aos="fade-up"
-        data-aos-delay="2900"
-      >
-        Mobile & Web <br />
-        app Development
-      </div>
+    <div class="xl:mx-[106px] 2xl:mx-[102px] mt-[14px]">
+      <section id="homepage">
+        <div
+          class="xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16 xl:h-[242px] 2xl:h-[340px]"
+        >
+          <div
+            class="xl:min-w-[223px] 2xl:col-span-3 flex justify-center items-center tetrisBlock bg-lblock"
+          >
+            <img
+              src="./public/alvylLogo.svg"
+              class="xl:w-[94px] xl:h-[64px] 2xl:w-[116px] 2xl:h-[74px]"
+            />
+          </div>
+          <div
+            class="xl:min-w-[766px] 2xl:col-span-10 flex justify-center items-center tetrisBlock font-brandon font-bold text-wgray xl:text-xxs xl:leading-xs 2xl:text-md 2xl:leading-lg"
+          >
+            <p>
+              Amazing products are coming up everyday, but often <br />
+              they lack right builders to build functional and beautiful <br />
+              products
+            </p>
+          </div>
 
-      <div
-        class="tetrisBlock col-span-4 flex items-center justify-center font-[brandon-grotesque] text-3xl font-normal"
-        data-aos="fade-up"
-        data-aos-delay="3000"
-      >
-        IoT, Data & <br />
-        Cloud computing
-      </div>
-    </div>
+          <div
+            class="tetrisBlock flex justify-center items-center space-y-2 xl:min-w-[223px] 2xl:col-span-3 bg-rblock"
+          >
+            <img
+              src="./public/ham.svg"
+              class="xl:w-[42px] xl:h-[14px] 2xl:w-[59px] 2xl:h-[20px]"
+            />
+          </div>
+        </div>
+        <div
+          class="xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16 gap-0 opacity-1 xl:h-[242px] 2xl:h-[340px]"
+        >
+          <div
+            class="xl:min-w-[688px] 2xl:col-span-9 flex justify-center items-center tetrisBlock text-white font-[brandon-grotesque] xl:text-xxs xl:leading-xs 2xl:text-lg 2xl:leading-xl"
+          >
+            We are a new-age people first tech <br />
+            agency. Your own team of builders.
+          </div>
+          <div
+            class="xl:min-w-[532px] 2xl:col-span-7 flex justify-center items-center tetrisBlock text-white font-[orpheus-pro] xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl font-medium"
+          >
+            Great products need <br />
+            great builders
+          </div>
+        </div>
+        <div
+          class="xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16 xl:h-[242px] 2xl:h-[340px] gap-0 opacity-1"
+        >
+          <div
+            class="xl:min-w-[376px] 2xl:col-span-5 flex items-center justify-center tetrisBlock text-white font-[orpheus-pro] xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl font-bold"
+          >
+            What our <br />
+            builders are <br />
+            capable of ?
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[224px] 2xl:col-span-3 flex items-center justify-center text-white font-[brandon-grotesque] xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md"
+          >
+            Design & <br />
+            Branding
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[304px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md"
+          >
+            Mobile & Web <br />
+            App Development
+          </div>
 
-    <!-- <div class="div1" data-aos="fade-right">Alvyl-1</div>
-    <div class="div1" data-aos="fade-left">Alvyl-2</div>
-    <div class="div1" data-aos="fade-up-right">Alvy-3</div>
-    <div class="div1" data-aos="fade-up-left">Alvyl-4</div>
-    <div class="div1" data-aos="fade-right" data-aos-duration="3000">
-      Alvyl-5
-    </div>
-    <div class="div1" data-aos="fade-left" data-aos-duration="3000">
-      Alvyl-6
-    </div>
-    <div class="div1" data-aos="fade-up-right" data-aos-duration="3000">
-      Alvy-7
-    </div>
-    <div class="flex flex-row">
-      <div class="div1" data-aos="fade-up-left" data-aos-duration="3000">
-        Alvyl-8
-      </div>
-      <div
-        class="div2"
-        data-aos="fade-left"
-        data-aos-duration="3000"
-        data-aos-offset="200"
+          <div
+            class="tetrisBlock xl:min-w-[300px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md"
+          >
+            IoT, Data & <br />
+            Cloud computing
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="xl:flex xl:flex-col xl:items-center 2xl:grid 2xl:grid-cols-16"
       >
-        Alvyl-9
-      </div>
+        <div
+          class="tetrisBlock xl:min-w-[530px] 2xl:col-start-6 2xl:col-end-[13] flex items-center justify-center text-white font-[brandon-grotesque] xl:text-xxs xl:leading-xs 2xl:text-lg 2xl:leading-xl font-normal xl:h-[242px] 2xl:h-[340px]"
+        >
+          Assembling a great team is <br />
+          expensive and time-consuming.
+        </div>
+        <div
+          class="tetrisBlock xl:min-w-[760px] xl:col-end-10 2xl:col-start-4 2xl:col-end-[14] flex items-center justify-center text-white font-[orpheus-pro] xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl font-normal xl:h-[242px] 2xl:h-[340px]"
+        >
+          Quickly scale <br />
+          your team with us
+        </div>
+      </section>
+
+      <section class="xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16">
+        <div
+          class="tetrisBlock xl:min-w-[379px] 2xl:col-span-5 xl:h-[242px] 2xl:h-[340px] flex items-center justify-center text-center text-white font-[orpheus-pro] font-bold xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl"
+        >
+          Why our <br />
+          builders ?
+        </div>
+        <div
+          class="tetrisBlock xl:min-w-[609px] 2xl:col-span-8 xl:h-[242px] 2xl:h-[340px] flex items-center justify-center text-white font-[brandon-grotesqeue] xl:text-xxs xl:leading-xs 2xl:text-lg 2xl:leading-xl"
+        >
+          Friendly and passionate. Ready to take <br />
+          up any challenge. People with whom you <br />
+          can code, talk football, Cycling and <br />
+          watch house of dragons 🐉
+        </div>
+        <div
+          class="tetrisBlock xl:min-w-[224px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex items-center justify-center text-center text-white font-[orpheus-pro] font-bold xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl"
+        >
+          Clients
+        </div>
+      </section>
+
+      <section id="clients">
+        <div class="xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16">
+          <div
+            class="tetrisBlock xl:min-w-[221px] 2xl:col-span-3 2xl:col-start-4 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Path 24.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[223px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Path 57.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[223px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img
+              src="./public/discord-logo-color-wordmark-1.svg"
+              class="w-[150px]"
+            />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[68px] 2xl:col-span-1 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          ></div>
+        </div>
+
+        <div class="xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16">
+          <div
+            class="tetrisBlock xl:min-w-[223px] 2xl:col-span-3 flex justify-center"
+          >
+            <img src="./public/Group 558.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[68px] 2xl:col-span-1 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          ></div>
+          <div
+            class="tetrisBlock xl:min-w-[222px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Group 559.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[222px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Group 562.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[222px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Path 47.svg" class="w-[150px]" />
+          </div>
+        </div>
+
+        <div class="xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16">
+          <div
+            class="tetrisBlock xl:min-w-[222px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Rivian_logo.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[222px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/sage-logo.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[225px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Group 561.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[222px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Path 24.svg" class="w-[150px]" />
+          </div>
+          <div
+            class="tetrisBlock xl:min-w-[222px] 2xl:col-span-3 xl:h-[242px] 2xl:h-[340px] flex justify-center"
+          >
+            <img src="./public/Path 57.svg" class="w-[150px]" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about-us">
+        <div
+          class="grid xl:grid-cols-12 2xl:grid-cols-16 auto-cols-auto xl:h-[242px] 2xl:h-[340px]"
+        >
+          <div
+            class="tetrisBlock xl:col-span-8 xl:col-start-3 2xl:col-span-10 2xl:col-start-4 flex justify-center items-center text-white font-[orpheus-pro] xl:text-[40px] 2xl:text-xxl 2xl:leading-xxl"
+          >
+            We exist to craft happy lives 😊
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-12 2xl:grid-cols-16 gap-0 opacity-1 xl:h-[242px] 2xl:h-[340px]"
+        >
+          <div
+            class="tetrisBlock xl:col-span-6 2xl:col-span-8 flex justify-center items-center text-white font-[brandon-grotesque] xl:text-[26px] 2xl:text-lg 2xl:leading-xl"
+          >
+            At Alvyl, we all work together to help <br />
+            each other out, no matter what.
+          </div>
+          <div
+            class="tetrisBlock xl:col-span-6 2xl:col-span-8 flex justify-center items-center text-white font-[brandon-grotesque] xl:text-[26px] 2xl:text-lg 2xl:leading-xl font-thin"
+          >
+            Whether it’s picking up slack when <br />
+            someone is sick, or just lending ear.
+          </div>
+        </div>
+        <div
+          class="grid xl:grid-cols-12 2xl:grid-cols-16 auto-cols-auto xl:h-[242px] 2xl:h-[340px]"
+        >
+          <div
+            class="tetrisBlock flex justify-center items-center xl:col-span-2 2xl:col-span-3 text-white font-[brandon-grotesque] xl:text-[26px] 2xl:text-lg 2xl:leading-xl"
+          >
+            We code, <br />
+            design and <br />
+            build.
+          </div>
+          <div
+            class="tetrisBlock xl:col-span-8 2xl:col-span-10 flex justify-center items-center text-white font-[orpheus-pro] xl:text-[40px] 2xl:text-xxl 2xl:leading-xxl"
+          >
+            And of course, we also like to <br />
+            have a lot of fun!
+          </div>
+          <div
+            class="tetrisBlock flex justify-center items-center space-y-2 xl:col-span-2 2xl:col-span-3 text-white font-[brandon-grotesque] xl:text-[26px] 2xl:text-lg 2xl:leading-xl"
+          >
+            potlucks, <br />
+            party nights, <br />
+            games & <br />
+            many more
+          </div>
+        </div>
+        <div
+          class="grid xl:grid-cols-12 2xl:grid-cols-16 auto-cols-auto xl:h-[242px] 2xl:h-[340px]"
+        >
+          <div
+            class="tetrisBlock flex justify-center items-center xl:col-span-2 2xl:col-span-4 text-white font-[orpheus-pro] xl:text-[40px] xl:leading-xxl 2xl:text-xxl 2xl:leading-xxl"
+          >
+            We are
+          </div>
+          <div
+            class="tetrisBlock xl:col-span-8 2xl:col-span-7 flex justify-center items-center text-white font-[brandon-grotesque] xl:text-[26px] 2xl:text-lg 2xl:leading-xl"
+          >
+            Fearless to take up any challenge. <br />
+            We thrive with optimism.
+          </div>
+          <div
+            class="tetrisBlock flex justify-center items-center space-y-2 xl:col-span-2 2xl:col-span-5 text-white font-[orpheus-pro] xl:text-[40px] xl:leading-xxl 2xl:text-xxl 2xl:leading-xxl"
+          >
+            Human & <br />
+            Meaningful
+          </div>
+        </div>
+      </section>
+
+      <section id="people">
+        <div class="grid xl:grid-cols-12 2xl:grid-cols-16 auto-cols-auto">
+          <img
+            src="/public/img_34.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+          <div
+            class="tetrisBlock xl:col-span-8 2xl:col-span-10 xl:h-[242px] 2xl:h-[340px] flex justify-center items-center text-white font-[orpheus-pro] xl:text-[40px] xl:leading-[50px] 2xl:text-xxl 2xl:leading-xxl"
+          >
+            Our builders
+          </div>
+          <img
+            src="/public/img_27.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+        </div>
+        <div class="grid xl:grid-cols-10 2xl:grid-cols-15 gap-2 auto-cols-auto">
+          <img
+            src="/public/img_29.png"
+            class="xl:col-span-2 2xl:col-span-3 xl:col-start-3 2xl:col-start-4 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+          <img
+            src="/public/img_37.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+          <img
+            src="/public/img_33.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+        </div>
+        <div class="grid xl:grid-cols-10 2xl:grid-cols-15 gap-2 auto-cols-auto">
+          <img
+            src="/public/img_39.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+          <img
+            src="/public/img_40.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+          <img
+            src="/public/img_36.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+          <img
+            src="/public/img_38.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+          <img
+            src="/public/img_26.png"
+            class="xl:col-span-2 2xl:col-span-3 m-[6px] xl:h-[242px] 2xl:h-[340px]"
+          />
+        </div>
+      </section>
+
+      <!-- <section id="contact-us" class="tetrisBlock h-[474px]">
+        <div
+          class="font-[orpheus-pro] font-medium text-[60px] leading-[68px] text-center text-[#FDFCF4] pt-[79px]"
+        >
+          Why wait? connect now
+        </div>
+        <div class="mt-10 grid grid-cols-16 gap-5">
+          <input
+            type="email"
+            class="bg-[#333333] rounded-[30px] font-[orpheus-pro] text-[48px] leading-[60px] text-[#FDFCF4] h-[138px] col-span-9 col-start-3 px-[80px]"
+          />
+          <button
+            class="bg-[#141414] font-[brandon-grotesque] text-[48px] leading-[60px] text-[FDFCF4] rounded-[30px] h-[138px] col-span-3"
+          >
+            Submit
+          </button>
+        </div>
+      </section> -->
     </div>
-    <div class="div1" data-aos="fade-up-right" data-aos-duration="3000">
-      Alvy-7
-    </div>
-    <div></div> -->
   </body>
 </html>
