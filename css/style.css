@@ -1,5 +1,6 @@
 body {
   background-color: #000000;
+  /* mx-[20px] md:mx-[60px] xl:mx-[106px] */
 }
 
 .parentDiv {
@@ -90,22 +91,6 @@ body {
   margin-top: 6px;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 .fullVP {
   height: 100vh;
   scroll-snap-align: start;
@@ -115,4 +100,23 @@ body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+}
+
+.slidein {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }

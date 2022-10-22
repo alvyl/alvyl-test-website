@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- meta data -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Alvyl</title>
+
+    <!-- styling -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- tailwind config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -81,19 +86,22 @@
         },
       };
     </script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- importing typography fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/yib0usv.css" />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
-  <body class="">
-    <div
-      class="mx-[20px] md:mx-[60px] xl:mx-[106px] 2xl:mx-[102px] scrollContainer"
-    >
-      <section id="homepage" class="sticky top-1 fullVP">
+
+  <body>
+    <div class="2xl:mx-[102px] scrollContainer" id="scrollArea">
+      <section id="menu" class="fullVP">
         <div
-          class="mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-between 2xl:grid 2xl:grid-cols-16"
+          class="mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
         >
           <div
+            id="watchme"
             class="2xl:min-w-[300px] col-span-2 md:col-span-4 xl:min-w-[223px] 2xl:col-span-3 h-[100px] xl:h-[242px] 2xl:h-[340px] flex justify-center items-center tetrisBlock bg-lblock"
           >
             <img
@@ -101,7 +109,20 @@
               class="w-[44px] h-[28px] md:w-[53px] md:h-[34px] xl:w-[94px] xl:h-[64px] 2xl:w-[116px] 2xl:h-[74px]"
             />
           </div>
-
+          <div
+            class="invisible mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
+          >
+            <div
+              class="hidden xl:min-w-[766px] 2xl:col-span-10 2xl:col-start-4 md:h-[100px] xl:h-[242px] 2xl:h-[340px] xl:flex justify-center items-center tetrisBlock font-brandon font-bold text-wgray xl:text-xxs xl:leading-xs 2xl:text-md 2xl:leading-lg"
+            >
+              <p>
+                Amazing products are coming up everyday, but often <br />
+                they lack right builders to build functional and beautiful
+                <br />
+                products
+              </p>
+            </div>
+          </div>
           <div
             class="tetrisBlock col-span-2 md:col-span-4 md:h-[100px] xl:h-[242px] 2xl:h-[340px] flex justify-center items-center space-y-2 xl:min-w-[223px] 2xl:col-span-3 2xl:col-start-14 bg-rblock"
           >
@@ -113,7 +134,7 @@
         </div>
       </section>
 
-      <section id="homepage" class="sticky top-1 fullVP">
+      <section id="intro-0" class="fullVP">
         <div
           class="top-100 mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
         >
@@ -144,8 +165,9 @@
           </div>
         </div>
       </section>
-      <section id="homepage" class="sticky top-1 fullVP">
+      <section id="intro-1" class="fullVP">
         <div
+          id="scroll-to"
           class="invisible top-100 mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
         >
           <div
@@ -175,7 +197,7 @@
           </div>
         </div>
       </section>
-      <section id="homepage" class="fullVP">
+      <section id="intro-2" class="fullVP">
         <div
           class="invisible top-100 mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
         >
@@ -236,6 +258,171 @@
           </div>
         </div>
       </section>
+
+      <section id="services" class="fullVP">
+        <div
+          class="top-100 mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
+        >
+          <div
+            class="tetrisBlock col-span-2 md:col-span-4 xl:min-w-[224px] 2xl:col-span-3 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Design & <br />
+            Branding
+          </div>
+          <div
+            class="tetrisBlock col-span-2 md:col-span-4 xl:min-w-[304px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Mobile & Web <br />
+            App Development
+          </div>
+        </div>
+        <div
+          class="mwidth grid grid-cols-4 md:grid-cols-8 xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16 gap-0 opacity-1"
+        >
+          <div
+            class="col-span-4 md:col-span-8 xl:min-w-[376px] 2xl:col-span-5 flex items-center justify-center tetrisBlock text-white font-[orpheus-pro] text-xs leading-xs xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl font-bold h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            What our <br />
+            builders are <br />
+            capable of ?
+          </div>
+          <div
+            class="invisible tetrisBlock col-span-2 md:col-span-4 xl:min-w-[224px] 2xl:col-span-3 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Design & <br />
+            Branding
+          </div>
+          <div
+            class="invisible tetrisBlock col-span-2 md:col-span-4 xl:min-w-[304px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Mobile & Web <br />
+            App Development
+          </div>
+
+          <div
+            class="tetrisBlock col-span-4 md:col-span-8 xl:min-w-[300px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            IoT, Data & <br />
+            Cloud computing
+          </div>
+        </div>
+      </section>
+      <section id="services-1" class="fullVP">
+        <div
+          class="invisible top-100 mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
+        >
+          <div
+            class="tetrisBlock col-span-2 md:col-span-4 xl:min-w-[224px] 2xl:col-span-3 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Design & <br />
+            Branding
+          </div>
+          <div
+            class="tetrisBlock col-span-2 md:col-span-4 xl:min-w-[304px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Mobile & Web <br />
+            App Development
+          </div>
+        </div>
+        <div
+          class="mwidth grid grid-cols-4 md:grid-cols-8 xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16 gap-0 opacity-1"
+        >
+          <div
+            class="invisible col-span-4 md:col-span-8 xl:min-w-[376px] 2xl:col-span-5 flex items-center justify-center tetrisBlock text-white font-[orpheus-pro] text-xs leading-xs xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl font-bold h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            What our <br />
+            builders are <br />
+            capable of ?
+          </div>
+          <div
+            class="tetrisBlock col-span-4 md:col-span-8 xl:min-w-[530px] 2xl:col-start-6 2xl:col-end-[13] flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-lg 2xl:leading-xl font-normal h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Assembling a great team is <br />
+            expensive and time-consuming.
+          </div>
+
+          <div
+            class="invisible tetrisBlock col-span-4 md:col-span-8 xl:min-w-[300px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            IoT, Data & <br />
+            Cloud computing
+          </div>
+        </div>
+      </section>
+      <section
+        id="services-1"
+        class="fullVP mwidth grid grid-cols-4 md:grid-cols-8 xl:flex xl:flex-col xl:items-center 2xl:grid 2xl:grid-cols-16"
+      >
+        <div
+          class="invisible top-100 mwidth grid grid-cols-4 md:grid md:grid-cols-8 xl:flex xl:flex-row xl:justify-center 2xl:grid 2xl:grid-cols-16"
+        >
+          <div
+            class="tetrisBlock col-span-2 md:col-span-4 xl:min-w-[224px] 2xl:col-span-3 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Design & <br />
+            Branding
+          </div>
+          <div
+            class="tetrisBlock col-span-2 md:col-span-4 xl:min-w-[304px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Mobile & Web <br />
+            App Development
+          </div>
+        </div>
+        <div
+          class="invisible mwidth grid grid-cols-4 md:grid-cols-8 xl:flex xl:justify-center 2xl:grid 2xl:grid-cols-16 gap-0 opacity-1"
+        >
+          <div
+            class="invisible col-span-4 md:col-span-8 xl:min-w-[376px] 2xl:col-span-5 flex items-center justify-center tetrisBlock text-white font-[orpheus-pro] text-xs leading-xs xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl font-bold h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            What our <br />
+            builders are <br />
+            capable of ?
+          </div>
+          <div
+            class="tetrisBlock col-span-4 md:col-span-8 xl:min-w-[530px] 2xl:col-start-6 2xl:col-end-[13] flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-lg 2xl:leading-xl font-normal h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            Assembling a great team is <br />
+            expensive and time-consuming.
+          </div>
+
+          <div
+            class="invisible tetrisBlock col-span-4 md:col-span-8 xl:min-w-[300px] 2xl:col-span-4 flex items-center justify-center text-white font-[brandon-grotesque] text-ms leading-xxs xl:text-xxs xl:leading-xs 2xl:text-sm 2xl:leading-md h-[200px] xl:h-[242px] 2xl:h-[340px]"
+          >
+            IoT, Data & <br />
+            Cloud computing
+          </div>
+        </div>
+        <div
+          class="tetrisBlock col-span-4 md:col-span-8 xl:min-w-[760px] xl:col-end-10 2xl:col-start-4 2xl:col-end-[14] flex items-center justify-center text-white font-[orpheus-pro] text-xs leading-xs xl:text-lg xl:leading-lg 2xl:text-xxl 2xl:leading-xxl font-normal h-[200px] xl:h-[242px] 2xl:h-[340px]"
+        >
+          Quickly scale <br />
+          your team with us
+        </div>
+      </section>
     </div>
+    <script>
+      $(document).ready(function () {
+        $("#menu, #intro-0, #intro-1, #intro-2").addClass("sticky top-1");
+      });
+      let options = {
+        root: document.querySelector("#scrollArea"),
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+      function handleIntersect(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            $("#intro-0, #intro-1, intro-2").removeClass("sticky top-1");
+            $("#intro-2").addClass("invisible");
+            $("#services, #services-1, #services-2").addClass("sticky top-1");
+          }
+        });
+      }
+      let observer = new IntersectionObserver(handleIntersect, options);
+
+      let target = document.querySelector("#services");
+      observer.observe(target);
+    </script>
   </body>
 </html>
